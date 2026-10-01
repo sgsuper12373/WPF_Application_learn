@@ -1,0 +1,21 @@
+# .NET build and restore output
+[Bb]in/
+[Oo]bj/
+[Aa]rtifacts/
+[Pp]ublish/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Test output
+[Tt]est[Rr]esult*/
+
+# Logs and temporary files
+[Ll]og/
+[Ll]ogs/
+*.log
+*.tmp
