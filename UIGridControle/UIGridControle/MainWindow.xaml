@@ -1,0 +1,50 @@
+﻿<Window x:Class="UIGridControle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIGridControle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            
+             <!--
+                RowDefination create number of rows specified number of times same with the columsDefination
+                By default Grid is dynamic i.e resizes with window size
+                we can change this be defining Height and width parameters
+            -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition />
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Create the reactangle and specify position using the Grid.Row and Grid.Column-->
+            
+            <!--Header--> 
+            <Rectangle Fill="Blue" Grid.Row="0" Grid.Column="0" />
+            
+            <!--Dynamic containers-->
+            <Grid Grid.Row="1">
+                <!--We can use * to do proportioned partitioning--> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.6*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.Column="0" Fill="Gray"/>
+                <Rectangle Grid.Column="1" Fill="LightBlue"/>
+                <Rectangle Grid.Column="2" Fill="LightCyan"/>
+            </Grid>
+            
+            <!--Footer-->
+            <Rectangle Fill="Yellow"  Grid.Row="3" Grid.Column="0"/>
+        </Grid>
+      
+
+    </Grid>
+</Window>
